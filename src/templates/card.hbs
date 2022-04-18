@@ -1,0 +1,35 @@
+{{#each this}}
+  <li title='{{title}}' class='film-card__item' data-id='{{id}}'>
+    <a href='' class='film-card__link link-no-tdn'>
+      <div class='film-card__thumb'>
+        {{#if poster_path}}
+          <img
+            src='https://image.tmdb.org/t/p/w500{{poster_path}}'
+            alt='{{title}}'
+            data-id='{{id}}'
+          />
+        {{else}}
+          <img
+            src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/No_image_available.svg/300px-No_image_available.svg.png'
+            alt='No image available'
+            data-id='{{id}}'
+          />
+        {{/if}}
+      </div>
+      <div class='film-card__content'>
+        <h2 class='film-card__title'>{{title}}</h2>
+        <p class='film-card__text'><span>{{#each genres}}
+              {{#if @last}}
+                {{this}}
+              {{else}}
+                {{this}},
+              {{/if}}{{/each}}</span>
+          |
+          <span>{{release_date}}</span></p>
+        <div class='film-card__rating--wrapper'>
+          <span class='film-card__rating'>{{vote_average}}</span>
+        </div>
+      </div>
+    </a>
+  </li>
+{{/each}}

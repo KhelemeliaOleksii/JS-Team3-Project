@@ -4,4 +4,21 @@
  */
 
 // Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './base/reset';
+@import './base/common';
+@import './utils/variables';
+@import './utils/mixins';
+@import './layout/footer';
+@import './layout/header';
+@import './components/section';
+@import './components/container';
+@import './components/logo';
+@import './components/newslist';
+@import './layout/filmlist';
+@import './components/modal';
+@import './components/paginationButtons';
+@import './layout/modal';
+@import './components/spinner';
+@import './components/annoying';
+@import './components/spinnerExample';
+@import './components/onTopButton';

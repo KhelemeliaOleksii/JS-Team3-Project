@@ -1,0 +1,117 @@
+.film-list__container {
+  margin-bottom: 40px;
+  @media screen and (min-width: 768px) {
+    margin-bottom: 60px;
+  }
+}
+
+.film-card__list {
+  margin-top: -20px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: -32px;
+    margin-left: -32px;
+  }
+}
+
+.film-card__item {
+  overflow: hidden;
+  background-color: var(--footer-background-color);
+  border-radius: 5px;
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transform: scale(1);
+  transition: transform 250ms linear;
+  margin-top: 20px;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 32px;
+    margin-left: 32px;
+    flex-basis: calc((100% - 2 * 32px) / 2);
+  }
+  @media screen and (min-width: 1024px) {
+    margin-left: 16px;
+    flex-basis: calc((100% - 3 * 16px) / 3);
+  }
+}
+
+.film-card__item:hover,
+.film-card__item:focus {
+  transform: scale(1.05);
+  transition: transform 250ms linear;
+}
+
+.film-card__thumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: var(--secondary-font-modal-color);
+  overflow: hidden;
+  margin-bottom: 10px;
+  height: 398px;
+  @media screen and (min-width: 768px) {
+    height: 455px;
+  }
+  @media screen and (min-width: 768px) {
+    height: 449px;
+  }
+}
+
+.film-card__title,
+.film-card__text {
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+}
+.film-card__title {
+  width: 250px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+  line-height: 1.17;
+  text-transform: uppercase;
+  color: var(--main-font-color);
+  margin-bottom: 2px;
+  @media screen and (min-width: 768px) {
+    line-height: 1.33;
+  }
+}
+.film-card__text {
+  line-height: 1.33;
+  color: var(--secondary-font-colorized);
+}
+
+.film-card__content {
+  position: relative;
+  padding-left: 3px;
+  background-color: var(--footer-background-color);
+}
+
+.film-card__rating--wrapper {
+  position: absolute;
+  right: 3px;
+  bottom: 3px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 36px;
+  height: 16px;
+  border-radius: 5px;
+  background-color: var(--secondary-font-colorized);
+}
+
+.film-card__rating {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 0;
+  color: #ffffff;
+  text-transform: uppercase;
+}

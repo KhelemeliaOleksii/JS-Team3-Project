@@ -1,0 +1,38 @@
+.on-top-button {
+  position: fixed;
+  bottom: 10vh;
+  right: 7vw;
+  z-index: 1000;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--secondary-font-colorized);
+  color: var(--main-font-onbackground-color);
+  box-shadow: 0px 5px 10px 1px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: scale(1);
+  transition: all 250ms linear;
+
+  @media screen and (min-width: 768px) {
+    bottom: 7vh;
+    right: 7vw;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.on-top-button--visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.load-more-button:hover,
+.on-top-button:hover {
+  transform: scale(1.2);
+  transition: all 250ms linear;
+}

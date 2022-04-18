@@ -1,0 +1,284 @@
+// < !-- HEADER SECTION -->
+
+.header{
+    height: 230px;
+    background-color: var(--main-font-color);
+    //для подгрузки картинки по js
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+@media screen and (min-width: 768px) {
+    height: 215px;
+}
+
+@media screen and (min-width: 1024px) {
+    height: 216px;
+}
+}
+.preview{
+    padding-top: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo__text-second {
+    display: block;
+    margin-left: 8px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--main-font-onbackground-color);
+}
+
+// Подгружаем class по js 
+
+.main-header-img {
+    background-image:
+    linear-gradient(to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)),
+    url(../images/mobil/hero-mobile@1x.jpg);
+
+    @media screen and (min-width: 768px) {
+        background-image:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+        url(../images/tablet/hero-tablet@1x.jpg);
+    }
+
+    @media screen and (min-width: 1024px) {
+        background-image:
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+        url(../images/desktop/hero-desktop@1x.jpg);
+    }
+}
+
+// -------------nav-------------
+
+.header__site-nav{
+    display: flex;
+    padding-top: 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo__text{
+    display: none;
+
+    @media screen and (min-width: 768px) {
+    display: block;
+    margin-left: 8px;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 30px;
+    color: var(--main-font-onbackground-color);
+    }
+
+    @media screen and (min-width: 1024px){
+    margin-left: 10px;
+    }
+}
+
+.logo__svg {
+    width: 24px;
+    height: 24px;
+}
+
+.header__nav_links {
+    display: flex;
+}
+
+.header__lib_link {
+    margin-left: 40px;
+    
+}
+
+
+// ---------------input-----------------------
+
+.header__input_box {
+    margin-top: 54px;
+    display: flex;
+    text-align: center;
+    margin-bottom: 16px;
+    @media screen and (min-width: 768px){
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+}
+
+.header__input {
+    width: 280px;
+    height: 20px;
+    padding: 0;
+    color: var(--main-font-onbackground-color);
+    background-color: transparent;
+    outline: 0;
+    border-width: 0 0 0.5px;
+    border-color: var(--main-font-onbackground-color);
+    @media screen and (min-width: 768px){
+        width: 336px;
+    }
+}
+
+
+.header__input::placeholder {
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--main-font-onbackground-color);
+}
+
+.header__search_btn {
+    margin-left: -12px;
+    background: transparent;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+}
+
+.header__search-btn-icon {
+    width: 12px;
+    height: 12px;
+    fill: #ffffff;
+    
+    
+}
+// --------------span for error---------------------
+.header__input_msg_error {
+    height: 20px;
+    font-size: 14px;
+    font-weight: 400;
+    // overflow: scroll;
+    color: var(--secondary-font-notification-color);
+    @media screen and (min-width: 768px){
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    }
+}
+.visually-hidden{
+    display: none;
+}
+
+//----------------- подчеркивание при выборе кнопки-----------------
+.site-nav__link {
+    padding: 0;
+    position: relative;
+        border: none;
+        background: transparent;
+            font-family: 'Roboto';
+            text-transform: uppercase;
+            font-weight: 500;
+            font-size: 12px;
+            color: var(--main-font-onbackground-color);
+
+}
+.site-nav__link:hover,
+.site-nav__link:focus{
+    font-size: 12.4px;
+    text-shadow: 2px 2px 4px var(--secondary-font-colorized);
+    color: var(--secondary-font-colorized);
+}
+
+
+.current::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: var(--secondary-font-colorized);
+    border-radius: 2px;
+    display: block;
+    bottom: -2px;
+    transition: opacity 250ms cubic-bezier(0.34, 0.04, 0.37, 0.73);
+}
+
+// < !-- HEADER LIBRARY SECTION -->
+
+//  Заменияем class по js при открытии стр. библиотеки
+.library-header-img {
+    background-image: 
+    linear-gradient(to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)),
+    url(../images/mobil/library-hero-mobile@1x.jpg);
+
+    @media screen and (min-width: 768px) {
+    background-image: 
+        linear-gradient(to right,
+            rgba(0, 0, 0, 0.56),
+            rgba(0, 0, 0, 0.56)),
+    url(../images/tablet/library-hero-tablet@1x.jpg);
+    }
+
+    @media screen and (min-width: 1024px) {
+    background-image:
+    linear-gradient(to right,
+        rgba(0, 0, 0, 0.56),
+        rgba(0, 0, 0, 0.56)),
+    url(../images/desktop/library-hero-desktop@1x.jpg);
+    }
+}
+
+.header__library_btm{
+    margin-top: 60px;
+    margin-bottom: 62px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    @media screen and (min-width: 768px){
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+}
+.header__library_btm_item:first-child{
+    margin-right: 20px;
+    @media screen and (min-width: 768px){
+        margin-right: 32px;
+    }
+    @media screen and (min-width: 1024px){
+        margin-right: 16px;
+    }
+}
+
+.header__library_btm_item{
+    padding: 0;
+    width: 130px;
+    height: 44px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    border-radius: 5px;
+    background-color: var(--secondary-font-colorized);
+    border: none;
+    color: var(--main-font-onbackground-color);
+@media screen and (min-width: 768px){
+    width: 152px;
+}
+@media screen and (min-width: 1024px){
+    width: 147px;
+}
+}
+
+.transparent-btn{
+background-color: transparent;
+border: 1px solid rgba(255, 255, 255, 1);
+}
+
+.team {
+font-size: 20px;    
+color: var(--secondary-font-colorized);
+}

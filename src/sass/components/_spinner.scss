@@ -1,0 +1,130 @@
+
+.spinner {
+  position: relative;
+  width: 95px;
+  height: 95px;
+  margin-top: 175px;
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  @media screen and (min-width: 768px) {
+    margin-top: 200px;
+  }
+
+  &__elem {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+  }
+  &__first-box {
+    top: 5px;
+    left: 5px;
+    background-color: var(--secondary-font-color);
+    animation: first 2000ms infinite 1000ms;
+  }
+  &__second-box {
+    top: 5px;
+    right: 5px;
+    background-color: var(--secondary-font-colorized);
+    animation: second 2000ms infinite 1000ms;
+  }
+  &__third-box {
+    bottom: 5px;
+    left: 5px;
+    background-color: var(--secondary-font-notification-color);
+    animation: third 2000ms infinite 1000ms;
+  }
+  &__fourth-box {
+    bottom: 5px;
+    right: 5px;
+    background-color: var(--main-font-color);
+    animation: fourth 2000ms infinite 1000ms;
+  }
+
+  &::after {
+    // content: '...';
+    position: absolute;
+    color: var(--text-color);
+    top: 100%;
+    left: 20%;
+
+    animation: scaleBefore 2000ms infinite 1000ms;
+  }
+}
+
+@keyframes first {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(50%, 50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes second {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(-50%, 50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes third {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(50%, -50%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes fourth {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes scaleBefore {
+  0% {
+    transform: scaleY(1);
+  }
+  50% {
+    transform: scale(1.5, 1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+ @keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.visible {
+  display: block;
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 2s linear;
+}
+.invisible {
+  display: none;
+}

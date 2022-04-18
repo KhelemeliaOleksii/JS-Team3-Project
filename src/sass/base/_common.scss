@@ -1,0 +1,13 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-family: 'Roboto', sans-serif;
+
+    color: var(--main-font-color); //black
+    background-color: var(--main-font-onbackground-color); //white
+    }
+    .link-no-tdn { 
+      text-decoration: none; 
+    }
+    .list-no-ls {
+      list-style: none;
+  }
