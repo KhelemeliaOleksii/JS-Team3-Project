@@ -1,7 +1,7 @@
 //import '../sass/main.scss';
 // import iframeHbs from '../templates/iframe.hbs';
 import {fetchOneFilm,fetchVideo} from './fetchOneFilm';
-//import modalHbs from '../templates/modal.hbs';
+import modalHbs from '../templates/modal.hbs';
 import Notiflix from 'notiflix';
 import { chekFilmByIdWatched, addToLocalStorageWatchedFilm, removeWatchedFilmFromLocalStorage,
   addToLocalStorageQueueFilm, removeQueueFilmFromLocalStorage, chekFilmByIdQueue } from "./localStorage"; 
