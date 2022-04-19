@@ -15,4 +15,4 @@ import './js/localStorage';
 // import './js/annoying';
 import './js/spinnerExample';
 import './js/scrollOnTop';
-import './js/modal';
+// import './js/modal';
